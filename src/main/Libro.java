@@ -4,6 +4,7 @@ package main;
  * Clase que proporciona los libros
  * @author Mariano Criado Prados
  * @version 6.3.2025
+ * @see <a href="https://github.com/MCRIADO99/T2_MarianoCriado">...</a>
  */
 public class Libro {
     /**
