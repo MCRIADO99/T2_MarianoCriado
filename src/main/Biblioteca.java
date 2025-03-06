@@ -1,42 +1,58 @@
-package biblioteca;
+package main;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Clase que agrupa los libros
+ * @see Libro para ver el metodo de libro
+ * @author Mariano Criado Prados
+ * @version 6.3.2025
+ */
 public class Biblioteca {
-
-    // TODO: Documentar estos atributos
+    /**
+     * Lista de libros
+     * @see Libro para ver el metodo de libro
+     */
     private final List<Libro> libros;
 
-    // TODO: Documentar este método
+    /**
+     * Metodo de creacion de la lista de Libros
+     */
     public Biblioteca() {
         libros = new ArrayList<>();
     }
 
-    // TODO: Documentar este método.
+    /**
+     * Conjunto de libros
+     * @param libros lista de libros previamente añadidos
+     */
     //  Test: NO HAY QUE TESTEAR ESTE METODO
     public Biblioteca(List<Libro> libros) {
         this.libros = libros;
     }
 
-    // TODO: Testear este metodo.
-    //  Test: Comprobar si se ha agregado
     public boolean agregarLibro(Libro libro) {
         return libros.add(libro);
     }
 
-    // TODO: Testear este metodo.
-    //  Test: comprobar si se ha eliminado
     public boolean eliminarLibro(Libro libro) {
         return libros.remove(libro);
     }
 
-    // TODO: Documentar este método
+    /**
+     * Metodo para obtener los libros que hay en la biblitoeca
+     * @return libros
+     */
     public List<Libro> getLibros() {
         return libros;
     }
 
-    // TODO: Documentar este método.
+    /**
+     * Busqueda de libro por titulo
+     * @param titulo Titulo que se desea buscar
+     * @return Si lo encuentra lo devuelve, sino no
+     */
     //  Test 01: buscar libro existente y comprobar que lo localiza.
     //  Test 02: buscar libro NO existente y comprobar que no lo localiza.
     public Libro encuentraLibroPorTitulo(String titulo) {
@@ -48,12 +64,14 @@ public class Biblioteca {
         return null;
     }
 
-    // TODO: Documentar este metodo.
-    //  No testearlo
-    // Este metodo está obsoleto. Hay que documentarlo como tal.
-    //  Recuerda: las anotaciones @deprecated y @link a la nueva
-    //  versión mejorada encuentraLibrosPorAutor(...)
-    //  En esta ocasión, NO TESTEAREMOS este metodo
+    /**
+     * Metodo de busqueda por autor
+     * @deprecated Version actualizada posteriormente
+     * @version 1.0
+     * @link encuentraLibrosPorAutor
+     * @param autor Nombre autor
+     * @return Si encuentra un libro con ese autor lo muestra
+     */
     public Libro encuentaLibroPorAutor(String autor) {
         for (Libro libro : libros) {
             if (libro.getAutor().equals(autor)) {
@@ -63,9 +81,13 @@ public class Biblioteca {
         return null;
     }
 
-    // TODO: Documentar este metodo
-    // Este metodo sustituye al metodo anterior. Está disponible desde la
-    //  versión 2.0. Hay que documentarlo teniéndolo en cuenta.
+    /**
+     * Metodo sustitutivo de busqueda de libros por autor
+     * @version 2.0
+     * @param autor Nombre del autor del libro que se busca
+     * @return Libros coincidentes con ese autor
+     */
+
     // TODO: Testear este metodo.
     //  Test: Comprobar la lista de libros que devuelve para un autor existentes.
     //  Test: Comprobar la lista de libros que devuelve para un autor No existente
