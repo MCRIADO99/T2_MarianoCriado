@@ -1,15 +1,32 @@
-package biblioteca;
+package main;
 
+/**
+ * Clase que proporciona los libros
+ * @author Mariano Criado Prados
+ * @version 6.3.2025
+ * @see <a href="https://github.com/MCRIADO99/T2_MarianoCriado">...</a>
+ */
 public class Libro {
-
-    // TODO: Documentar estos atributos
+    /**
+     * Atributo que hace referencia al titulo del libro
+      */
     private String titulo;
+    /**
+     * Atributo que hace referencia al autor del libro
+     */
     private String autor;
+    /**
+     * Atributo que hace referencia al año de publicacion
+     */
     private int anioPublicacion;
 
+    /**
+     * Metodo que reune los atributos y da la vision completa
+     * @param titulo nombre del libro
+     * @param autor creador del libro
+     * @param anioPublicacion año de publicacion
+     */
 
-    // TODO: Documentar este método
-    // TODO: Testear este método
     public Libro(String titulo, String autor, int anioPublicacion) {
         this.titulo = titulo;
         this.autor = autor;
@@ -24,7 +41,10 @@ public class Libro {
         this.titulo = titulo;
     }
 
-    // TODO: Documentar este método
+    /**
+     * Autor del libro
+     * @return Autor libro
+     */
     public String getAutor() {
         return autor;
     }
@@ -33,7 +53,10 @@ public class Libro {
         this.autor = autor;
     }
 
-    // TODO: Documentar este método
+    /**
+     * Fecha en la que se publica
+     * @return año de publicación
+     */
     public int getAnioPublicacion() {
         return anioPublicacion;
     }
